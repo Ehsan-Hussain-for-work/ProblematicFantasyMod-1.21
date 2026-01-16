@@ -12,12 +12,12 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ProblematicVampiresMod.MOD_ID);
 
+    //ores
     public static final RegistryObject<Item> SUNSTONE = ITEMS.register("sunstone",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SUNSTONE_DUST = ITEMS.register("sunstone_dust",
             () -> new Item(new Item.Properties()));
-
 
 
     public static final RegistryObject<Item> BLOODSTONE = ITEMS.register("bloodstone",
@@ -26,11 +26,13 @@ public class ModItems {
     public static final RegistryObject<Item> BLOODSTONE_NUGGET = ITEMS.register("bloodstone_nugget",
             () -> new Item(new Item.Properties()));
 
-
-
+    //advanced items
     public static final RegistryObject<Item> PURIFICATION_SALT = ITEMS.register("purification_salt",
             () -> new PurificationSaltItem(new Item.Properties().durability(32)));
 
+    //food items
+    public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.GARLIC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -18,12 +18,14 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BLOODSTONE.get()))
                     .title(Component.translatable("creativetab.problematicvampiresmod.problematic_vampires_mod"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        //ores items
                         output.accept(ModItems.BLOODSTONE_NUGGET.get());
                         output.accept(ModItems.BLOODSTONE.get());
 
                         output.accept(ModItems.SUNSTONE_DUST.get());
                         output.accept(ModItems.SUNSTONE.get());
 
+                        //ore blocks
                         output.accept(ModBlocks.BLOODSTONE_BLOCK.get());
                         output.accept(ModBlocks.SUNSTONE_BLOCK.get());
 
@@ -31,7 +33,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SUNSTONE_ORE.get());
                         output.accept(ModBlocks.SUNSTONE_TUFF_ORE.get());
 
+                        //advanced items
                         output.accept(ModItems.PURIFICATION_SALT.get());
+
+                        //foods
+                        output.accept(ModItems.GARLIC.get());
                     }).build()
     );
 
