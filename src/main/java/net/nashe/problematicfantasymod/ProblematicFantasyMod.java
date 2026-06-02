@@ -2,6 +2,7 @@ package net.nashe.problematicfantasymod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.nashe.problematicfantasymod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +12,6 @@ public class ProblematicFantasyMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.registerModItems();
 	}
 }
